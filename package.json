@@ -1,0 +1,33 @@
+{
+  "name": "url-helper",
+  "version": "0.1.0",
+  "description": "A URL helper for use with design systems at The Grid.",
+  "main": "lib/url-helper.js",
+  "scripts": {
+    "test": "grunt test --stack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/design-systems/url-helper"
+  },
+  "author": "Paul Young",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/design-systems/url-helper/issues"
+  },
+  "homepage": "https://github.com/design-systems/url-helper",
+  "dependencies": {
+    "URIjs": "^1.16.0",
+    "url": "^0.10.3"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "build": "npm run clean; ./node_modules/.bin/coffee --compile --output lib/ src/",
+    "clean": "mkdir -p lib; rm -r lib; mkdir lib",
+    "test": "npm run build; ./node_modules/.bin/mocha 'spec/**/*.coffee' --compilers coffee:coffee-script/register --reporter spec"
+  }
+}
