@@ -1,5 +1,5 @@
 {
-  "name": "url-helper",
+  "name": "@design-systems/url-helper",
   "version": "0.1.0",
   "description": "A URL helper for use with design systems at The Grid.",
   "main": "lib/url-helper.js",
